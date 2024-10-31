@@ -1,0 +1,36 @@
+---
+const SECTIONS = [
+  { href: "/", title: "Home" },
+  { href: "aboutUs", title: "About Us" },
+  { href: "plans", title: "Services" },
+  { href: "contact", title: "Contact" },
+];
+---
+
+<header
+  class="h-16 bg-Primary flex items-center justify-between px-8 md:px-16 fixed z-[999] shadow-md rounded-2xl ml-[5%] mt-[2%] top-0"
+>
+  <a href="/"
+    ><img src="/favicon.svg" alt="Turno Sync Header Logo" class="h-14" /></a
+  >
+  <ul class="inline-flex gap-5">
+    {
+      SECTIONS.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class="text-white text-lg font-medium hover:text-Secondary duration-300"
+          >
+            {item.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</header>
+
+<style>
+  header {
+    width: calc(100vw - 10%);
+  }
+</style>

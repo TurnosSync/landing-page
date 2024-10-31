@@ -1,54 +1,59 @@
-# Astro Starter Kit: Basics
+# Repositorio Landing-Page TurnoSync
+### En colaboración de:
+- Andres Felipe López Becerra
+- Juan David Cutiva López
+- Luis Alejandro Lugo Becerra
+- Andres Julian Gonzalez Quincos
 
-```sh
-npm create astro@latest -- --template basics
+#### Descripción General
+**TurnoSync** es una aplicación Web la cual facilita la reserva de turnos en diferentes locales, como lo puede ser una Peluquería, Barbería, Spa, Etc.
+El objetivo es optimizar los servicios de estos locales y por ende que puedan tener más ingresos, que tengan una distribución del tiempo óptima tanto de los clientes como de los profesionales, Este implementa un sistema de gestión de turnos mediante reservas en el cual el usuario pude ver los horarios del profesional y reservar algún servicio que allá configurado el profesional, El profesional podrá ajustar Hora y Valor del servicio a ofrecer.
+
+#### Características del Proyecto
+##### PROFESIONAL
+- **Gestión de Reservas:** Poder visibilizar las reservabas que tiene el profesional de una manera amigable y fácil de entender, esto ayuda a optimizar el tiempo del profesional.
+
+- **Gestión del tiempo del Profesional:** El profesional podrá modificar sus horarios dependiendo de la disponibilidad del mismo, como puede ser, hora de almuerzo, diferentes horarios de trabajo, días de trabajo, Estos tiempos los podrá visibilizar el cliente al momento de la reserva.
+
+- **Ofrecer Servicios:** El profesional podrá mostrarle al cliente los servicios que maneja, el tiempo estimado que lleva completar el servicio y el precio de este mismo junto a una breve descripción del servicio, cuando le reserven el servicio le va a llegar una notificación al correo.
+
+##### USUARIO
+-  **Reservar Turnos:** El usuario podrá ver los horarios y disponibilidad del profesional y así poder hacer la reserva con este mismo.
+
+- **Escoger el Servicio deseado:** El usuario podrá ver y escoger los servicios que proporcione el profesional, al momento de escoger el servicio el usuario podrá ver el costo, tiempo estimado y una corta descripción del servicio, cuando el usuario reserve un servicio le va a llegar una notificación al correo.
+
+#### Tecnologías Utilizadas
+
+- **JavaScript**
+- **Astro**
+- **Vite**
+- **HTML, Tailwind**
+
+### Instalación
+
+Sigue los pasos a continuación para configurar el proyecto localmente:
+1. **Clonar el repositorio:**
+```bash
+--
+git clone https://github.com/TurnoSync/landing-page.git
+--
+ cd ./landing-page-turnoSync/
+--
 ```
+2. **Instalar Extensiones**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+ Astro Extensión link [Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode&ssr=false#review-details "Astro")
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+3. **Instalar Dependencias:**
+```bash
+--
+npm i
+--
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+3. **Correr El Proyecto:**
+```bash
+--
+npm run dev
+--
+```

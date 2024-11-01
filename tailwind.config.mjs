@@ -20,11 +20,15 @@ export default {
 
 	plugins: [
 		require('@tailwindcss/typography'),
-		function ({ addComponents, theme }) {
+		function ({ addComponents }) {
 			addComponents({
-				'.btn': {
-					padding: theme('spacing.4'),
-					margin: 'auto'
+				'.title': {
+					'font-size': '3.75rem',
+					'line-height': '1'
+				},
+				'.subtitle': {
+					'font-size': '1.875rem',
+					'line-height': '2.25rem'
 				}
 			});
 		}

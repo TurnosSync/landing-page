@@ -6,7 +6,10 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@sections/*": ["src/sections/*"],
-      "@scripts/*": ["src/scripts/*"]
-    }
+      "@scripts/*": ["src/scripts/*"],
+      "@data/*": ["src/data/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

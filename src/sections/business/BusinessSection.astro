@@ -1,0 +1,38 @@
+---
+interface Props {
+  nameBusiness: string;
+  srcImg: string;
+}
+var { nameBusiness, srcImg } = Astro.props;
+
+if (nameBusiness == "Tattoo & Piercing") {
+  nameBusiness = "Tattoo And Piercing Studios";
+} else {
+  nameBusiness = nameBusiness;
+}
+---
+
+<section
+  class="w-screen h-auto flex justify-around items-center mt-12 flex-col mx-auto"
+>
+  <!-- <h1>The best software for {nameBusines}</h1> -->
+  <div
+    class="w-[85%] h-auto flex flex-col sm:flex-row justify-center items-center"
+    id="Business Description"
+  >
+    <div class="w-full sm:w-[45%] flex flex-col items-center justify-center">
+      <h1 class="h-fit font-semibold text-5xl mb-10 text-Secondary">
+        The best software for {nameBusiness}
+      </h1>
+      <p class="h-fit font-medium text-xl prose text-Black">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptates
+        officia cumque voluptatum nam ea eos. Accusamus dicta harum ab delectus,
+        voluptatum iste voluptatibus earum perspiciatis voluptates, corrupti
+        porro impedit.
+      </p>
+    </div>
+    <div class="w-full h-full sm:w-[55%] flex items-center justify-center">
+      <img class="w-[60%] sm:w-[80%] mt-14 md:mt-0" src={srcImg} />
+    </div>
+  </div>
+</section>

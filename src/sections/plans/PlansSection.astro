@@ -1,0 +1,31 @@
+---
+import CartPlans from "@components/CartPlans.astro";
+---
+
+<section class="flex flex-col items-center justify-center mt-28 mb-4">
+  <h1 class="subtitle font-semibold text-wrap text-center px-4">
+    The #1 SuperApp for service-based businesses
+  </h1>
+  <h2 class="mt-8 text-2xl font-medium">
+    Choose a plan and grow with Turno Sync.
+  </h2>
+  <p class="w-[80%] md:w-[50%] text-xl mt-8 prose text-Black text-pretty">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eligendi
+    corporis est at sit nobis ducimus vel reiciendis velit, voluptas
+    necessitatibus corrupti omnis, illo cumque delectus quaerat magni temporibus
+    nisi.
+  </p>
+</section>
+
+<section class="flex gap-y-3 flex-col items-center justify-center text-center">
+  <h2 class="subtitle my-8">What you get with each plan.</h2>
+  <section
+    id="plans"
+    class="flex gap-x-4 gap-y-12 flex-wrap items-center justify-center mx-auto"
+  >
+    <CartPlans />
+    <CartPlans />
+    <CartPlans />
+    <CartPlans />
+  </section>
+</section>

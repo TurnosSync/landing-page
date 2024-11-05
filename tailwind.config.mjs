@@ -7,7 +7,7 @@ export default {
 				Primary: '#ff9102',
 				Secondary: '#160b55',
 				White: '#f5f5f5',
-				Black: '#161616'
+				Black: '#090909'
 			},
 			screens: {
 				xs: '430px'

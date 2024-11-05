@@ -1,11 +1,20 @@
 import businessData from "@data/businessData.json";
-export const BUSINESS = businessData;
+const BUSINESS = businessData;
 
 export default function business() {
   return (
     <>
       {BUSINESS.map((item) => {
-        var style = item.text === "Hairdressing Salons" ? "bg-red-500" : "";
+        var style =
+          item.text === "Hairdressing Salons"
+            ? "relative top-[0.45rem]"
+            : // @ts-expect-error : Validation works without any problem but TypeScript shows an error
+              "" || item.text === "Nail Salons"
+              ? "relative bottom-1"
+              : // @ts-expect-error : Validation works without any problem but TypeScript shows an error
+                "" || item.text === "Tattoo & Piercing"
+                ? "relative top-[0.45rem] left-[0.2rem]"
+                : "";
 
         return (
           <a

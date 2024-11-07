@@ -1,0 +1,18 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@sections/general/Footer.astro";
+import Header from "@sections/general/Header.astro";
+import Hero from "@sections/home/Hero.astro";
+import Image from "@sections/home/Image.astro";
+import Stores from "@sections/home/Stores.astro";
+---
+
+<Layout title="Turno Sync | Home">
+  <Header transition:name="header" />
+  <main class="mt-20">
+    <Hero />
+    <Image />
+    <Stores />
+  </main>
+  <Footer />
+</Layout>

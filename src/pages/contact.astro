@@ -1,0 +1,16 @@
+---
+import Layout from "@layouts/Layout.astro";
+import ContactSection from "@sections/contact/ContactSection.astro";
+import Footer from "@sections/general/Footer.astro";
+import Header from "@sections/general/Header.astro";
+---
+
+<Layout title="Turno Sync | Contact">
+  <Header transition:name="header" />
+  <main
+    class="mt-32 flex flex-col items-center gap-y-8 text-2xl text-center font-semibold"
+  >
+    <ContactSection />
+  </main>
+  <Footer />
+</Layout>

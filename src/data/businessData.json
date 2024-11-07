@@ -1,0 +1,33 @@
+[
+    {
+        "href": "business/hairdressingsalons",
+        "srcImg": "https://weibook.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhair-salon.c34b7e28.svg&w=64&q=75",
+        "text": "Hairdressing Salons"
+    },
+    {
+        "href": "business/barbershop",
+        "srcImg": "https://weibook.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbarbershop.da623271.svg&w=64&q=75",
+        "text": "Barbershop"
+    },
+    {
+        "href": "business/nailsalons",
+        "srcImg": "https://weibook.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnail-salon.1d74eb75.svg&w=64&q=75",
+        "text": "Nail Salons",
+        "style": "relative bottom-1 bg-green-500 size-20"
+    },
+    {
+        "href": "business/spasalons",
+        "srcImg": "https://weibook.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fspa.67dee95b.svg&w=64&q=75",
+        "text": "Spa Salons"
+    },
+    {
+        "href": "business/beautysalons",
+        "srcImg": "https://weibook.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbeauty-salon.8d5a460d.svg&w=64&q=75",
+        "text": "Beauty Salons"
+    },
+    {
+        "href": "business/tattoo&piercing",
+        "srcImg": "https://weibook.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftattos.025c8bf7.svg&w=64&q=75",
+        "text": "Tattoo & Piercing"
+    }
+]

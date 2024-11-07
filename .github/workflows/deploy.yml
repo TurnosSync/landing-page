@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [test-deploy]
 
 jobs:
   deploy:
@@ -17,12 +17,12 @@ jobs:
       - run: git config user.name github-actions
       - run: git config user.email github-actions@github.com
       - name: Install dependencies
-        run: astro check && astro build
+        run: npm install
 
       - name: Build page
-        run: npm run build
+        run: astro check && astro build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./dist

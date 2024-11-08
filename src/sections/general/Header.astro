@@ -1,36 +1,65 @@
 ---
+import ArrowDown from "@icons/arrowDown.astro";
+
 const SECTIONS = [
-  { href: "/", title: "Home" },
-  { href: "/aboutUs", title: "About Us" },
-  { href: "/plans", title: "Services" },
-  { href: "/contact", title: "Contact" },
+  { href: "/", title: "Home", style: "text-Secondary", arrow: true },
+  { href: "/aboutUs", title: "About Us", style: "text-Primary", arrow: false },
+  { href: "/plans", title: "Services", style: "text-Primary", arrow: false },
+  { href: "/contact", title: "Contact", style: "text-Primary", arrow: false },
 ];
 ---
 
 <header
-  class="h-16 bg-Primary flex items-center justify-between px-8 md:px-16 fixed z-[999] shadow-md rounded-2xl ml-[5%] mt-[2%] top-0"
+  class="h-16 bg-[#f9f1f1] flex items-center justify-between px-8 md:px-48 fixed z-[999] shadow-md top-0 w-screen font-Nunito"
 >
   <a href="/"
-    ><img src="/favicon.svg" alt="Turno Sync Header Logo" class="h-14" /></a
+    ><img
+      src="/TurnoSync.png"
+      alt="Turno Sync Header Logo"
+      class="h-16 mr-6"
+    /></a
   >
   <ul class="inline-flex gap-5">
     {
-      SECTIONS.map((item) => (
-        <li>
-          <a
-            href={item.href}
-            class="text-white text-lg font-medium hover:text-Secondary duration-300"
-          >
-            {item.title}
-          </a>
-        </li>
-      ))
+      SECTIONS.map((item) => {
+        const style =
+          item.style === "text-Secondary"
+            ? "test"
+            : // @ts-expect-error : If you are doing the data validation correctly, Astro will just mark it as an error.
+              "" || item.style === "text-Primary"
+              ? "test2"
+              : "";
+
+        return (
+          <li>
+            <a
+              href={item.href}
+              class:list={[
+                " text-lg font-medium duration-300 inline-flex items-center",
+                {
+                  "text-Secondary hover:text-Primary": style === "test",
+                  "text-Primary hover:text-Secondary": style === "test2",
+                },
+              ]}
+            >
+              {item.title}
+              <ArrowDown show={item.arrow} />
+            </a>
+          </li>
+        );
+      })
     }
   </ul>
-</header>
 
-<style>
-  header {
-    width: calc(100vw - 10%);
-  }
-</style>
+  <section id="buttons" class="gap-x-2 h-full flex items-center">
+    <a type="button" href="#" class="font-semibold text-Secondary px-6 py-2.5"
+      >Login</a
+    >
+    <a
+      type="button"
+      href="#"
+      class="font-semibold text-Secondary px-6 py-2.5 border border-Secondary rounded-lg hover:bg-Primary hover:border-transparent transition-all duration-300 ease-out hover:scale-105 hover:text-White"
+      >Sing Up</a
+    >
+  </section>
+</header>

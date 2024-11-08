@@ -13,7 +13,9 @@ export default {
 				xs: '430px'
 			},
 			fontFamily: {
-				System: ['system-ui', 'sans-serif']
+				Inter: ['Inter Variable', 'sans-serif'],
+				Nunito: ['Nunito Sans Variable', 'sans-serif'],
+				Poppins: ['Poppins', 'sans-serif']
 			},
 		}
 	},

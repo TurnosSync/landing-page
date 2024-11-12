@@ -1,5 +1,6 @@
 ---
 import ArrowDown from "@icons/arrowDown.astro";
+import BurgerIcon from "@icons/burgerIcon.astro";
 
 const SECTIONS = [
   { href: "/", title: "Home", style: "text-Secondary", arrow: true },
@@ -62,4 +63,32 @@ const SECTIONS = [
       >Sing Up</a
     >
   </section>
+  <BurgerIcon />
 </header>
+
+<div
+  id="headerMobile"
+  class="w-screen h-48 bg-red-500 z-[998] fixed top-16 hidden"
+>
+  <div><h1>text</h1></div>
+</div>
+<script src="@scripts/HeaderShow.ts"></script>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+</style>

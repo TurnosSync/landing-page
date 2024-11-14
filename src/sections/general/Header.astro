@@ -11,7 +11,7 @@ const SECTIONS = [
 ---
 
 <header
-  class="h-16 bg-[#f9f1f1] flex items-center justify-between px-8 md:px-48 fixed z-[999] shadow-md top-0 w-screen font-Nunito"
+  class="h-16 bg-[#f9f1f1] flex items-center justify-between px-8 lg:px-32 xl:px-48 fixed z-[999] shadow-md top-0 w-screen font-Nunito"
 >
   <a href="/"
     ><img
@@ -20,15 +20,15 @@ const SECTIONS = [
       class="h-16 mr-6"
     /></a
   >
-  <ul class="inline-flex gap-5">
+  <ul class="lg:inline-flex gap-5 hidden">
     {
       SECTIONS.map((item) => {
         const style =
           item.style === "text-Secondary"
-            ? "test"
+            ? "secondary"
             : // @ts-expect-error : If you are doing the data validation correctly, Astro will just mark it as an error.
               "" || item.style === "text-Primary"
-              ? "test2"
+              ? "primary"
               : "";
 
         return (
@@ -38,8 +38,8 @@ const SECTIONS = [
               class:list={[
                 " text-lg font-medium duration-300 inline-flex items-center",
                 {
-                  "text-Secondary hover:text-Primary": style === "test",
-                  "text-Primary hover:text-Secondary": style === "test2",
+                  "text-Secondary hover:text-Primary": style === "secondary",
+                  "text-Primary hover:text-Secondary": style === "primary",
                 },
               ]}
             >
@@ -52,7 +52,60 @@ const SECTIONS = [
     }
   </ul>
 
-  <section id="buttons" class="gap-x-2 h-full flex items-center">
+  <div class="flex justify-center items-center gap-x-8">
+    <section id="buttons" class="gap-x-2 h-full sm:flex items-center hidden">
+      <a type="button" href="#" class="font-semibold text-Secondary px-6 py-2.5"
+        >Login</a
+      >
+      <a
+        type="button"
+        href="#"
+        class="font-semibold text-Secondary px-6 py-2.5 border border-Secondary rounded-lg hover:bg-Primary hover:border-transparent transition-all duration-300 ease-out hover:scale-105 hover:text-White"
+        >Sing Up</a
+      >
+    </section>
+    <div class="lg:hidden">
+      <BurgerIcon />
+    </div>
+  </div>
+</header>
+
+<div
+  id="headerMobile"
+  class="w-screen h-fit bg-red-50 z-[998] fixed top-16 shadow-md px-5 py-2.5 justify-between hidden"
+>
+  <ul class="flex flex-col gap-5 lg:hidden">
+    {
+      SECTIONS.map((item) => {
+        const style =
+          item.style === "text-Secondary"
+            ? "secondary"
+            : // @ts-expect-error : If you are doing the data validation correctly, Astro will just mark it as an error.
+              "" || item.style === "text-Primary"
+              ? "primary"
+              : "";
+
+        return (
+          <li>
+            <a
+              href={item.href}
+              class:list={[
+                " text-lg font-medium duration-300 inline-flex items-center",
+                {
+                  "text-Secondary hover:text-Primary": style === "secondary",
+                  "text-Primary hover:text-Secondary": style === "primary",
+                },
+              ]}
+            >
+              {item.title}
+              <ArrowDown show={item.arrow} />
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+  <section id="buttons" class="gap-x-2 h-auto flex items-center sm:hidden">
     <a type="button" href="#" class="font-semibold text-Secondary px-6 py-2.5"
       >Login</a
     >
@@ -63,14 +116,6 @@ const SECTIONS = [
       >Sing Up</a
     >
   </section>
-  <BurgerIcon />
-</header>
-
-<div
-  id="headerMobile"
-  class="w-screen h-48 bg-red-500 z-[998] fixed top-16 hidden"
->
-  <div><h1>text</h1></div>
 </div>
 <script src="@scripts/HeaderShow.ts"></script>
 

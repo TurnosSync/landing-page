@@ -3,9 +3,13 @@ import BusinessComponent from "@components/BusinessComponent";
 ---
 
 <section
-  class="w-[90vw] h-auto flex justify-around items-center mt-12 flex-col mx-auto mb-24"
+  class="w-[90vw] h-auto flex justify-around items-center mt-12 flex-col mx-auto mb-24 font-Inter"
 >
-  <h2 class="font-bold subtitle">Select your business type</h2>
+  <h2 class="font-bold subtitle text-Primary">
+    Choose the service of your <span class="text-[#009387] font-medium"
+      >Preference.</span
+    >
+  </h2>
   <div
     id="business"
     class="flex flex-wrap gap-8 justify-center items-center mt-8"
@@ -13,3 +17,11 @@ import BusinessComponent from "@components/BusinessComponent";
     <BusinessComponent />
   </div>
 </section>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
+
+  section > h2 > span {
+    font-family: "Covered By Your Grace", cursive;
+  }
+</style>

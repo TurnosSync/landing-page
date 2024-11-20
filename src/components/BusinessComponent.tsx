@@ -20,7 +20,7 @@ export default function business() {
           <a
             key={item.text}
             href={item.href}
-            className="w-32 h-40 flex flex-col justify-evenly items-center rounded-2xl overflow-hidden border-[2px] border-Primary hover:bg-Primary hover:border-transparent transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:text-White"
+            className="w-32 h-40 flex flex-col justify-evenly items-center rounded-2xl overflow-hidden border-[2px] border-Secondary hover:bg-Secondary hover:border-transparent transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:text-White"
           >
             <img
               src={item.srcImg}

@@ -1,16 +1,58 @@
-<section id="image">
+---
+const ICONS = [
+  {
+    name: "userPurple",
+    url: "/icons/userPurple.svg",
+    title: "15k+",
+    subTitle: "Active User",
+  },
+  {
+    name: "userGreen",
+    url: "/icons/userGreen.svg",
+    title: "30k",
+    subTitle: "Total Download",
+  },
+  {
+    name: "downloadIcon",
+    url: "/icons/downloadIcon.svg",
+    title: "10k",
+    subTitle: "Customer",
+  },
+];
+---
+
+<section class="font-Poppins bg-[#f8eded]">
   <div
-    class="flex gap-8 w-screen items-center justify-center flex-col md:flex-row"
+    class="w-screen min-h-60 flex gap-6 px-7 flex-wrap md:flex-nowrap justify-center"
   >
-    <img
-      src="https://www.eclosio.ong/wp-content/uploads/2018/08/default.png"
-      alt="Image"
-      class="w-[80%] md:w-[40%] rounded-md"
-    />
-    <img
-      src="https://www.eclosio.ong/wp-content/uploads/2018/08/default.png"
-      alt="Image"
-      class="w-[80%] md:w-[40%] rounded-md"
-    />
+    {
+      ICONS.map((item) => {
+        const color =
+          item.name === "userPurple"
+            ? "bg-[#eed8f3] px-3 md:px-6 py-[0.85rem] md:py-[1.7rem]"
+            : // @ts-expect-error : Validation works without any problem but TypeScript shows an error
+              "" || item.name === "downloadIcon"
+              ? "px-3 md:px-6 pt-2.5 md:pt-5 pb-3.5 md:pb-7 bg-[#fae6c3]"
+              : // @ts-expect-error : Validation works without any problem but TypeScript shows an error
+                "" || item.name === "userGreen"
+                ? "bg-[#ddf0e8] p-3 md:p-6"
+                : "";
+        return (
+          <div class="w-[45%] md:w-1/3 h-[60%] my-auto flex items-center justify-around">
+            <img
+              src={item.url}
+              alt={item.title}
+              class={`${color} rounded-3xl size-16 md:size-fit`}
+            />
+            <div class="flex items-center flex-col text-center">
+              <h3 class="text-xl md:text-3xl font-bold text-Primary mb-2">
+                {item.title}
+              </h3>
+              <p class="text-sm text-neutral-700">{item.subTitle}</p>
+            </div>
+          </div>
+        );
+      })
+    }
   </div>
 </section>

@@ -5,7 +5,7 @@ document.addEventListener("astro:page-load", () => {
   button.addEventListener("click", activate);
 
   function activate(): void {
-    if (button.checked === true) {
+    if (button.checked) {
       header.style.display = "flex";
       header.style.justifyContent = "space-between";
 
